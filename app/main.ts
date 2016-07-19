@@ -1,10 +1,11 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import { bootstrap }          from '@angular/platform-browser-dynamic';
+import { AppComponent }       from './app.component';
+import { appRouterProviders } from './app.routes';
 
-import { AppComponent } from './app.component';
-
-bootstrap(AppComponent);
-
-
+bootstrap(AppComponent, [
+    appRouterProviders
+])
+    .catch(err => console.error(err));
 /*
  Copyright 2016 Google Inc. All Rights Reserved.
  Use of this source code is governed by an MIT-style license that
